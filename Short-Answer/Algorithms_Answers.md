@@ -1,4 +1,6 @@
+#### Please add your answers to the ***Analysis of  Algorithms*** exercises here.
 
+## Exercise I
 ```python
 a)  a = 0
     while (a < n * n * n):
@@ -19,7 +21,7 @@ b)  sum = 0
 ```
 O(n log(n))
 
-This algorithm contains two loops whihc we multpily together for the runtime. The outer for loop runs n times. The inner while loop runs log n times.
+This algorithm contains two loops which we multiply together for the runtime. The outer for loop runs n times. The inner while loop runs log n times.
 
 ```
 c)  def bunnyEars(bunnies):
@@ -38,7 +40,7 @@ This is a very simple linear algorithm that calls itself recursively n times.
 
 ### Write out your proposed algorithm in plain English or pseudocode AND give the runtime complexity of your solution.
 
-We can divide the floors in half, (similar to a binary search on a sorted array) and try the middle floor. If the egg breaks, discard the above floors as possiblities, and remember this floor as the highest we need to consider as a possibility for f. We then divide the remaning floors below us in half, moving to that middle floor. If the egg doesn't break, we discard the floors below and only consider the floors above us. Repeating the action of dividing the remaining floors in half until the lowest floor where the egg breaks and assign that to f. Because we are treating this as a binary search, our solution has a runtime complexity of O(log(n)).
+We can divide the floors in half, (similar to a binary search on a sorted array) and try the middle floor. If the egg breaks, discard the above floors as possibilities, and remember this floor as the highest we need to consider as a possibility for f. We then divide the remaning floors below us in half, moving to that middle floor. If the egg doesn't break, we discard the floors below and only consider the floors above us. Repeating the action of dividing the remaining floors in half until the lowest floor where the egg breaks and assign that to f. Because we are treating this as a binary search, our solution has a runtime complexity of O(log(n)).
 
 i.e.:
 with building n = 100
@@ -51,6 +53,6 @@ drop the 1st egg at floor 50
             if the egg doesn't break:
                 move to floor 37 and drop 3rd egg
                     etc...
-    if the egg doesnt break:
+    if the egg doesn't break:
         move to floor 75 and drop the 2nd egg
             etc...
