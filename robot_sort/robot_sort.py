@@ -116,21 +116,23 @@ class SortingRobot:
                 if self.compare_item() == 1:
                     self.swap_item()
                 # robot will swap if held item value is lower or is equal
-                if self.compare_item() == -1 or self.compare_item() == None:   
-                    self.swap_item()
+                # STRETCH: optimizing by removing this as its essentially redundant
+                # if self.compare_item() == -1 or self.compare_item() == None:   
+                #    self.swap_item()
 
             # robot has arrived at end of the list!
             # now move left until we reach the initial empty space
             while self.compare_item() is not None:
                 self.move_left()
             self.swap_item()
-            # robot puts held in empty space
+            # robot puts held item in empty space
 
             self.move_right()
 
         # sorting complete! light off
         self.set_light_off()
-
+        
+        return print(self._time)
 
 
 if __name__ == "__main__":
