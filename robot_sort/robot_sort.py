@@ -92,10 +92,21 @@ class SortingRobot:
         """
         return self._light == "ON"
 
+# i think we should use bubble sort here because
+# it is a very simple sort which allows us to inspect two values
+# and if they are not orderd, swap into the sorted order,  
+# continuing to the end of the array
+# where it iterates over the array again until it completes
+# an entire pass without any swaps = array is sorted
+# move right = swapping for larger
+# move left = swapping for smaller
+
+# The robot has exactly one bit of memory: its light
+# we can use the light to indicate if the sort happened in the iteraiton
+
+# robots arm is like a pointer between the sorted & unsorted parts of the array
+
     def sort(self):
-        """
-        Sort the robot's list.
-        """
         """
         Sort the robot's list.
         """
